@@ -1,0 +1,99 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* dark and light theme mode */
+:root {
+  --color-bg: rgba (0, 0, 0, 0, 0.8);
+  --color-fg: white;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --colr-bg: white;
+    --color-fg: black;
+  }
+}
+body {
+  height: 100vh;
+  padding: 1rem 7rem;
+  font-family: Arial, Helvetica, Oswald, sans-serif;
+  position: relative;
+  background-color: var(--colr-bg);
+  color: var(--color-fg);
+}
+/* header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-weight: 700;
+  font-size: 2rem;
+}
+nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav li {
+  list-style: none;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+nav li a {
+  text-decoration: none;
+  color: black;
+}
+
+/* hero section */
+.hero {
+  display: flex;
+  justify-content: center;
+  margin: 8rem 0 0;
+}
+
+.hero-text {
+  width: 100%;
+  padding: 0 0.5rem;
+}
+
+.hero-text-img-wrapper img {
+  position: absolute;
+  inset: 0;
+}
+
+.big_hero_msg {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.75rem;
+}
+
+.small_hero_msg {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 1.35rem;
+}
+
+.btn-wrapper {
+  margin-top: 4rem;
+}
+
+button {
+  background: #9e7666;
+  border: 1px solid transparent;
+  border-radius: 1000px;
+  padding: 1rem 4rem;
+  color: white;
+  font-size: 1.25rem;
+}
+
+.person-image {
+  position: absolute;
+  top: 0;
+}
+
+.person-image img {
+  max-width: 100%;
+}
