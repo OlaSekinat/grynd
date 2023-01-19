@@ -5,19 +5,19 @@
 }
 /* dark and light theme mode */
 :root {
-  --color-bg: rgba (0, 0, 0, 0, 0.8);
-  --color-fg: white;
+  --color-bg: #ffffff;
+  --color-fg: #000000;
 }
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   :root {
-    --colr-bg: white;
-    --color-fg: black;
+    --colr-bg: rgba (0, 0, 0, 0, 0.8);
+    --color-fg: #ffffff;
   }
 }
 body {
   height: 100vh;
-  padding: 1rem 7rem;
-  font-family: Arial, Helvetica, Oswald, sans-serif;
+  padding: 1rem 7vw;
+  font-family: Arial, Helvetica, "Oswald", sans-serif;
   position: relative;
   background-color: var(--colr-bg);
   color: var(--color-fg);
@@ -29,6 +29,7 @@ header {
   align-items: center;
 }
 .logo {
+  font-family: "Oswald", sans-serif;
   font-weight: 700;
   font-size: 2rem;
 }
@@ -39,6 +40,7 @@ nav {
 
 nav li {
   list-style: none;
+  font-family: "Lato", sans-serif;
   font-weight: 600;
   font-size: 1.25rem;
 }
@@ -49,51 +51,58 @@ nav li a {
 
 /* hero section */
 .hero {
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
+  display: grid;
+  grid-template-columns: 50% 50%;
   margin: 8rem 0 0;
 }
 
-.hero-text {
-  width: 100%;
+/* left hero page */
+.hero-msg {
+  /* width: 100%; */
   padding: 0 0.5rem;
 }
 
-.hero-text-img-wrapper img {
+.hero-img-wrapper img {
+  max-width: 100%;
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  /* inset: 0; */
 }
 
 .big_hero_msg {
+  font-family: "Oswald", sans-serif;
   font-size: 2rem;
   font-weight: 700;
   line-height: 2.75rem;
 }
 
 .small_hero_msg {
+  font-family: "Lato", sans-serif;
   font-size: 1.2rem;
   font-weight: 700;
   margin-top: 1.35rem;
 }
-
-.btn-wrapper {
-  margin-top: 4rem;
-}
-
 button {
   background: #9e7666;
   border: 1px solid transparent;
   border-radius: 1000px;
   padding: 1rem 4rem;
   color: white;
+  font-family: "Oswald", sans-serif;
   font-size: 1.25rem;
+  margin-top: 4rem;
 }
 
-.person-image {
-  position: absolute;
-  top: 0;
+/* right hero page */
+.hero-pics {
+  padding: 0 0.5rem;
 }
 
 .person-image img {
+  position: absolute;
+  top: 0;
   max-width: 100%;
 }
